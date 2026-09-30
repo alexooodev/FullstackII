@@ -1,24 +1,9 @@
-// import { useState } from "react";
-
-const ProductList = ({ productList }) => {
-  // const [data, setData] = useState()
-
-  // const handler = () => {
-  //   productList.map((item) => {
-  //     console.log(item);
-  //   });
-  // };
-
-  // handler();
-
+const ProductList = () => {
   return (
     <div id="products">
-      <h2>Lista de Productos</h2>
-      <ul>
-        {productList.map((item) => {
-          return <li>{item}</li>;
-        })}
-      </ul>
+      <h2 style={{ backgroundColor: "#0B0C10", borderColor: "#45A293", color: "#45A293", borderRadius: "100px" }}>
+        Lista de Productos
+      </h2>
     </div>
   );
 };

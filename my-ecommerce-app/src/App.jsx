@@ -6,15 +6,33 @@ import ShoppingCart from "./components/ShoppingCart";
 import RegistrationForm from "./components/RegistrationForm";
 
 function App() {
-  const productList = ["Pizza", "Hamburguesa", "Sushi", "Vizzio", "Coca colita"];
+  // const navegationItems = ["Inicio", "Productos", "Carrito", "Registro"];
+  const navegationItems = [
+    {
+      link: "#home",
+      text: "Home",
+    },
+    {
+      link: "#products",
+      text: "Productos",
+    },
+    {
+      link: "#cart",
+      text: "Carro",
+    },
+    {
+      link: "#register",
+      text: "Registro",
+    },
+  ];
 
   return (
     <div className="App">
-      <Navigation />
+      <Navigation navegationItems={navegationItems} />
       <Container>
         <Row>
           <Col md={8}>
-            <ProductList productList={productList} />
+            <ProductList />
           </Col>
           <Col md={4}>
             <ShoppingCart />

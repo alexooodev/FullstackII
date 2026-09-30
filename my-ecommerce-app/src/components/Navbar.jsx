@@ -1,6 +1,8 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
 
-const Navigation = () => {
+const Navigation = (props) => {
+  const { navegationItems } = props;
+  // console.log(navegationItems);
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -8,10 +10,10 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Inicio</Nav.Link>
-            <Nav.Link href="#products">Productos</Nav.Link>
-            <Nav.Link href="#cart">Carrito</Nav.Link>
-            <Nav.Link href="#register">Registro</Nav.Link>
+            {navegationItems.map((item) => {
+              // console.log(item);
+              return <Nav.Link href={item.link}>{item.text}</Nav.Link>;
+            })}
           </Nav>
         </Navbar.Collapse>
       </Container>
